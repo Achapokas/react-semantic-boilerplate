@@ -21,23 +21,26 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         use: [
-        {
-          loader: "style-loader"
-        },
-        {
-          loader: "css-loader",
-          options: {
-            modules: true,
-            importLoaders: 1,
-            localIdentName: "[name_[local]_[hash:base64]]",
-            sourceMap: true,
-            minimze: true
+          {
+            loader: "style-loader"
+          },
+          {
+            loader: "css-loader"
+          },
+          {
+            loader: "sass-loader",
+            options: {
+              modules: true,
+              importLoaders: 1,
+              localIdentName: "[name_[local]_[hash:base64]]",
+              sourceMap: true,
+              minimze: true
+            }
           }
-        }
-       ]
-     }
+        ]
+      }
     ]
   },
   plugins: [htmlPlugin]
