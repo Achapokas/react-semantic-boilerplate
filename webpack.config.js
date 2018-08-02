@@ -21,24 +21,22 @@ module.exports = {
         }
       },
       {
-        test: /\.scss$/,
+        test: /\.css$/,
         use: [
-          {
-            loader: "style-loader"
-          },
-          {
-            loader: "css-loader"
-          },
-          {
-            loader: "sass-loader",
-            options: {
-              modules: true,
-              importLoaders: 1,
-              localIdentName: "[name_[local]_[hash:base64]]",
-              sourceMap: true,
-              minimze: true
-            }
-          }
+          'style-loader',
+          'css-loader'
+        ]
+      },
+      {
+       test: /\.(png|svg|jpg|gif)$/,
+       use: [
+         'file-loader'
+       ]
+     },
+      {
+       test: /\.(woff|woff2|eot|ttf|otf)$/,
+       use: [
+         'file-loader'
         ]
       }
     ]
