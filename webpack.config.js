@@ -13,18 +13,18 @@ const htmlPlugin = new HtmlWebPackPlugin({
 });
 
 module.exports = {
-   plugins: [
+  resolve: {
+   alias: {
+      '../../theme.config$': path.join(__dirname, 'my-semantic-theme/theme.config')  
+   }
+  },
+  plugins: [
     new MiniCssExtractPlugin({
       filename: "[name].[contenthash].css",
       chunkFilename: "[id].css"
     }),
     htmlPlugin
   ],
-  resolve: {
-     alias: {
-        '../../theme.config$': path.join(__dirname, 'my-semantic-theme/theme.config')  
-     }
-  },
   module: {
     rules: [
       {

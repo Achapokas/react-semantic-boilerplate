@@ -1,12 +1,19 @@
 import React from 'react';
-import { Button } from 'semantic-ui-react'
+import { Button, Container, Divider, Icon } from 'semantic-ui-react'
 
 
 const App = () => {
 	return (
 		<div className="App">
-		<p>Hello world</p>
-		<Button>TEST</Button>
+			<Container text>
+				<Divider horizontal>
+					Hello world
+				</Divider>
+				<Button icon labelPosition='left'>
+					<Icon name='right arrow' />
+					TEST
+				</Button>	
+			</Container>
 		</div>
 	)
 }
