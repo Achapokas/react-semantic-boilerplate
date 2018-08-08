@@ -9,7 +9,7 @@
 /* Button */
 @verticalMargin: 0em;
 @horizontalMargin: 0.25em;
-@backgroundColor: #E0E1E2;
+@backgroundColor: #aeaeae;
 @backgroundImage: none;
 @background: @backgroundColor @backgroundImage;
 @lineHeight: 1em;
